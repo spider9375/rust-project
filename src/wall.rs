@@ -25,8 +25,8 @@ impl Wall {
             }
         }
 
-        let available_x = if pos.x >= 25 { Direction::Left } else { Direction::Right };
-        let available_y = if pos.y >= 15 { Direction::Up } else { Direction::Down };
+        let available_x = if pos.x >= GRID_SIZE.0 - 5 { Direction::Left } else { Direction::Right };
+        let available_y = if pos.y >= GRID_SIZE.1 - 5 { Direction::Up } else { Direction::Down };
 
         let final_direction = match rng.rand_range(0..2) {
             0 => available_x,

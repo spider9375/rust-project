@@ -4,7 +4,7 @@ use crate::shared::{GridPosition, Segment, Direction};
 use crate::wall::Wall;
 use crate::food::Food;
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Ate {
     Itself,
     Food,
